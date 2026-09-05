@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/abhi9139/nodejs_Git_Actions/issues"
   },
-  "homepage": "https://github.com/abhi9139/nodejs_Git_Actions#readme"
+  "homepage": "https://github.com/abhi9139/nodejs_Git_Actions#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
