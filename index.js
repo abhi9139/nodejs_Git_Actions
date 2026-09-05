@@ -1,16 +1,13 @@
-const express = require("express");
+const http = require('http');
 
-const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Welcome to Node.js App 🚀");
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Welcome to my Node.js server!\n');
 });
 
-app.get("/health", (req, res) => {
-  res.send("OK");
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}/`);
 });
