@@ -1,0 +1,35 @@
+name: inputs
+on: 
+ workflow_dispatch:
+   inputs:
+      environment:
+        description: 'Deploy Environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - test
+          - staging
+          - production
+
+      version:
+        description: 'Which Version'
+        required: true
+        default: "v.1.0.1"
+
+jobs:
+  show_the_variables:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Display_inputs
+          run: |
+            echo "Environment: {{inputs.environment}}"
+            echo "App-version: {{inputs.version}}"
+           
+
+
+      
+
+
+
+
