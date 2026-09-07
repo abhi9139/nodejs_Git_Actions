@@ -23,8 +23,8 @@ jobs:
       steps:
         - name: Display_inputs
           run: |
-            echo "Environment:{{inputs.environment}}"
-            echo "App-version:{{inputs.version}}"
+            echo "Environment: ${{inputs.environment}}"
+            echo "App-version: ${{inputs.version}}"
            
 
 
