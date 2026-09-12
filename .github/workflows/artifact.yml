@@ -30,7 +30,7 @@ jobs:
 
             - name: check files
               run: |
-                   ls- lart ./build
+                   ls -lart ./build
                    cat ./build/build.txt
                   
              
