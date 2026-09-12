@@ -9,12 +9,12 @@ jobs:
         steps:
         - name: Set a variable
           id: step1
-          run: echo "msg=this is text" >> $GITHUBOUTPUT
+          run: echo "msg=this is text" >> ${GITHUB_OUTPUT}
         - name: get a variable
           run: echo "The output from step1 is ==> ${{steps.step1.outputs.msg}}"
         - name: Set second variable
           id: step2
-          run: echo "msg=this is step2" >> $GITHUBOUTPUT
+          run: echo "msg=this is step2" >> ${GITHUB_OUTPUT}
     job2:
         runs-on: ubuntu-latest
         needs: job1
