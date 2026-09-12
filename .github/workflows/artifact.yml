@@ -13,7 +13,7 @@ jobs:
               uses: actions/upload-artifact@v7
               with:
                 name: build-artifact
-                path: /build
+                path: ./build
     
 
 
@@ -22,11 +22,17 @@ jobs:
          runs-on: ubuntu-latest
          steps:
             
-            - name: download artifacts
+            - name: download artifact
               uses: actions/download-artifact@v8
               with:
                 name: build-artifact
                 path: ./build
+
+            - name: check files
+              run: |
+                   ls- lart ./build
+                   cat ./build/build.txt
+                  
              
             
     
